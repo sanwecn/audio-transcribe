@@ -21,7 +21,7 @@ cd <workspace>
 ```
 
 输入：`./input/*.mp3`
-输出：`./output/*.txt`
+输出：`./input/转写结果/*.txt`
 
 ## 输出格式
 
@@ -53,7 +53,6 @@ uv pip install -p funasr-env/bin/python funasr torch torchaudio soundfile scikit
 
 ### 2. 部署 TeleSpeechASR API
 
-TeleSpeechASR 模型部署在内网服务器 `REDACTED_HOST:PORT`，使用 vLLM 或兼容的 OpenAI API 格式。
 
 启动命令（在 API 服务器上）：
 ```bash
