@@ -1,5 +1,5 @@
 ---
-name: call-transcribe
+name: audio-transcribe
 description: "电话录音转文字，支持方言识别 + 说话人分离，输出带时间戳的双人文本。"
 ---
 

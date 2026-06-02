@@ -1,6 +1,10 @@
-# 🎙️ 录音转文字
+# 🎙️ Audio Transcribe — 录音转文字
 
-> 免费、本地部署、支持方言的录音转文字方案
+> 🆓 免费开源 · 🗣️ 50+方言 · 👥 说话人分离 · 🏠 本地部署
+
+将录音文件转为带说话人标签和时间戳的文本。基于 [TeleSpeechASR](https://modelscope.cn/models/TeleAI/TeleSpeechASR)（业内首个支持普通话+英文+50种方言自由混说的语音识别大模型）和 [cam++](https://modelscope.cn/models/iic/speech_campplus_sv_zh-cn_16k-common) 说话人分离，支持 [SiliconFlow 免费 API](https://siliconflow.cn) 或本地 vLLM 部署。
+
+适用于：会议录音整理、采访转写、电话记录归档、方言语音转文字等场景。
 
 ## ✨ 特点
 
@@ -32,8 +36,8 @@ TeleSpeechASR 支持粤语、上海话、四川话、河南话、东北话、闽
 ### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/sanwecn/call-transcribe.git
-cd call-transcribe
+git clone https://github.com/sanwecn/audio-transcribe.git
+cd audio-transcribe
 ```
 
 ### 2. 创建 Python 环境
@@ -130,7 +134,7 @@ cp /path/to/*.mp3 input/
 ## 📁 项目结构
 
 ```
-call-transcribe/
+audio-transcribe/
 ├── SKILL.md                      # 技能描述
 ├── README.md                     # 本文件
 ├── .env.example                  # 配置模板
@@ -144,7 +148,7 @@ call-transcribe/
 
 ## 📬 联系作者
 
-- Twitter: [@sanwe](https://x.com/sanwe)
+- Twitter: [@sanwecn](https://x.com/sanwe)
 
 ## 📄 License
 
