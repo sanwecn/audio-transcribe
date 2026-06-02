@@ -26,7 +26,7 @@ def load_dotenv():
 
 load_dotenv()
 
-ASR_API = os.environ.get("TELE_ASR_API", "http://REDACTED_HOST:PORT/v1/audio/transcriptions")
+ASR_API = os.environ.get("TELE_ASR_API", "")
 ASR_KEY = os.environ.get("TELE_ASR_KEY", "")
 RATE_LIMIT_DELAY = int(os.environ.get("TELE_ASR_RATE_LIMIT", "2"))
 WINDOW_SEC = 3.0
@@ -162,9 +162,12 @@ def process_file(mp3_path, output_path, spk_model):
 if __name__ == "__main__":
     from funasr import AutoModel
 
-    # 输入/输出路径可通过环境变量配置
-    audio_dir = ***"TRANSCRIBE_INPUT_DIR", "./input")
-    output_dir = os.environ.get("TRANSCRIBE_OUTPUT_DIR", os.path.join(audio_dir, "转写结果"))
+    # 输入/输出路径，默认 input/ 和 output/
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    default_input = os.path.join(script_dir, '..', 'input')
+    default_output = os.path.join(script_dir, '..', 'output')
+    audio_dir = os.environ.get('TRANSCRIBE_INPUT_DIR', default_input)
+    output_dir = os.environ.get('TRANSCRIBE_OUTPUT_DIR', default_output)
     os.makedirs(output_dir, exist_ok=True)
 
     mp3_files = sorted(glob.glob(os.path.join(audio_dir, "*.mp3")))
