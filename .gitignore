@@ -1,0 +1,15 @@
+# 敏感配置
+.env
+
+# Python
+__pycache__/
+*.pyc
+funasr-env/
+*.egg-info/
+
+# 模型缓存
+.cache/
+
+# 临时文件
+/tmp/
+*.wav
