@@ -2,7 +2,7 @@
 
 > 🆓 免费开源 · 🗣️ 50+方言 · 👥 说话人分离 · 🏠 本地部署
 
-将录音文件转为带说话人标签和时间戳的文本。基于 [TeleSpeechASR](https://modelscope.cn/models/TeleAI/TeleSpeechASR)（业内首个支持普通话+英文+50种方言自由混说的语音识别大模型）和 [cam++](https://modelscope.cn/models/iic/speech_campplus_sv_zh-cn_16k-common) 说话人分离，支持 [SiliconFlow 免费 API](https://siliconflow.cn) 或本地 vLLM 部署。
+将录音文件转为带说话人标签和时间戳的文本。基于 免费模型 [TeleSpeechASR](https://cloud.siliconflow.cn/i/QXhqLKas)（业内首个支持普通话+英文+50种方言自由混说的语音识别大模型）和 [cam++](https://modelscope.cn/models/iic/speech_campplus_sv_zh-cn_16k-common) 说话人分离，支持 [SiliconFlow 免费 API](https://cloud.siliconflow.cn/i/QXhqLKas) 或本地 vLLM 部署。
 
 适用于：会议录音整理、采访转写、电话记录归档、方言语音转文字等场景。
 
@@ -53,7 +53,7 @@ TeleSpeechASR 有两种使用方式：
 
 **方式一：SiliconFlow 免费 API（推荐）**
 
-注册 [SiliconFlow](https://siliconflow.cn) 账号，获取免费 API Key。
+注册 [SiliconFlow](https://cloud.siliconflow.cn/i/QXhqLKas) 账号，获取免费 API Key。
 
 ```bash
 cp .env.example .env
@@ -112,7 +112,7 @@ cp /path/to/*.mp3 input/
                                             合并 → 带标签的文本
 ```
 
-- **ASR**：[TeleSpeechASR](https://modelscope.cn/models/TeleAI/TeleSpeechASR) — 业内首个普通话+英文+50方言自由混说模型
+- **ASR**：[TeleSpeechASR](https://cloud.siliconflow.cn/i/QXhqLKas) — 业内首个普通话+英文+50方言自由混说模型
 - **说话人分离**：[cam++](https://modelscope.cn/models/iic/speech_campplus_sv_zh-cn_16k-common) 滑动窗口 + sklearn 聚类
 - **模型来源**：全部从 [ModelScope](https://modelscope.cn) 自动下载，无需 HuggingFace token
 
